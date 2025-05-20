@@ -19,7 +19,7 @@ api.interceptors.request.use(
 
     const token = authStore.token
 
-    console.log(token, '23123132123', config, authStore.token)
+     (token, '23123132123', config, authStore.token)
 
     // Add the Bearer token to the headers if it exists and it's not a login request
     if (token && !config.url.includes('/login')) {

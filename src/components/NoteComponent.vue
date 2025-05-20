@@ -8,7 +8,7 @@
           <div class="folded-corner"></div>
 
           <q-input :style="{ color: textColor }" v-model="noteCode" placeholder="Note noteCode" value='noteCode' dense
-            flat class="note-noteCode" autofocus :readonly="mode == create" />
+            flat class="note-noteCode" autofocus :readonly="mode == create ? true : false" />
 
           <div class="checklist-noteCode q-mt-md q-mb-sm">Checklist</div>
 
@@ -61,7 +61,6 @@
               <q-color v-model="color" format="rgba" preset-colors :show-alpha="true" flat style="width: 220px;" />
             </q-popup-proxy>
           </div>
-          {{ isEditing }}
 
           <!-- Edit / Save Buttons for view mode -->
           <div v-if="mode === 'view'" class="edit-controls q-mt-md" style="text-align: center;">
